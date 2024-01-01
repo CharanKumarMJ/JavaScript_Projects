@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="cricket.css">
+</head>
+<body>
+    <h1>Cricket Game</h1>
+    <button type="button" class="button-choice" onclick="
+    let computerChoice=  genertateComputerChoice();
+    let result = getResult('Bat', computerChoice);
+    resultDisplay('Bat',computerChoice,result);"><img src="images/bat.png" alt="Bat" class="choice"></button>
+
+    <button type="button" class="button-choice" onclick="
+    computerChoice= genertateComputerChoice();
+    result = getResult('Ball', computerChoice);
+    resultDisplay('Ball',computerChoice,result);"><img src="images/ball.png" alt="Ball" class="choice"></button>
+
+    <button type="button" class="button-choice" onclick="
+    computerChoice= genertateComputerChoice();
+    result = getResult('Stump', computerChoice);
+    resultDisplay('Stump',computerChoice,result);"><img src="images/stump.png" alt="Stump" class="choice"></button>
+
+    <h2 id="userChoice"></h2>
+    <h2 id="computerChoice"></h2>
+    <h2 id="result"></h2>
+    <h2 id="score"></h2>
+
+    <button onclick="localStorage.clear();
+    resetScore()" class="reset-button">🔄Reset</button>
+    
+    <script src="cricket.js"></script>
+</body>
+</html>
